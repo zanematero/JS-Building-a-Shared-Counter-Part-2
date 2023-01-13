@@ -24,3 +24,15 @@ async function main(){
     countContainer.textContent = countValue;
 }
 main()
+
+fetch("https://jsonplaceholder.typicode.com/todos/1", {
+method: "PATCH",
+body: JSON.stringify({
+    "counter": {
+        "value": 10
+      }
+    }),
+    headers: {
+    "Content-type": "application/json"
+    }
+})
